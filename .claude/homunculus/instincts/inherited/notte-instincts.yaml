@@ -1,0 +1,409 @@
+# Instincts generated from https://github.com/lllyyysss77/notte
+# Generated: 2026-05-13T03:17:33.326Z
+# Version: 2.0
+# NOTE: This file supplements (does not replace) any existing curated instincts.
+# High-confidence manually curated instincts should be preserved alongside these.
+
+---
+id: notte-commit-length
+trigger: "when writing a commit message"
+confidence: 0.6
+domain: git
+source: repo-analysis
+source_repo: https://github.com/lllyyysss77/notte
+---
+
+# Notte Commit Length
+
+## Action
+
+Write moderate-length commit messages (~52 characters)
+
+## Evidence
+
+- Average commit message length: 52 chars
+- Based on 3 commits
+
+---
+id: notte-naming-files
+trigger: "when creating a new file"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/lllyyysss77/notte
+---
+
+# Notte Naming Files
+
+## Action
+
+Use snake_case naming convention
+
+## Evidence
+
+- Analyzed file naming patterns in repository
+- Dominant pattern: snake_case
+
+---
+id: notte-import-relative
+trigger: "when importing modules"
+confidence: 0.75
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/lllyyysss77/notte
+---
+
+# Notte Import Relative
+
+## Action
+
+Use relative imports for project files
+
+## Evidence
+
+- Import analysis shows relative import pattern
+- Example: import { x } from '../lib/x'
+
+---
+id: notte-export-style
+trigger: "when exporting from a module"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/lllyyysss77/notte
+---
+
+# Notte Export Style
+
+## Action
+
+Prefer named exports
+
+## Evidence
+
+- Export pattern analysis
+- Dominant style: named
+
+---
+id: notte-test-separate
+trigger: "when writing tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/lllyyysss77/notte
+---
+
+# Notte Test Separate
+
+## Action
+
+Place tests in the tests/ or __tests__/ directory, mirroring src structure
+
+## Evidence
+
+- Separate test directory pattern detected
+- Tests live in dedicated test folders
+
+---
+id: notte-workflow-feature-implementation-with-tests
+trigger: "when doing feature implementation with tests"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/lllyyysss77/notte
+---
+
+# Notte Workflow Feature Implementation With Tests
+
+## Action
+
+Follow the feature-implementation-with-tests workflow:
+1. Modify or add implementation files in packages/notte-* (e.g., notte-core, notte-sdk, notte-browser)
+2. Update or add corresponding test files in tests/ or docs/src/testers/
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: packages/notte-*/src/notte_*/**/*.py, tests/**/*.py, docs/src/testers/**/*.py
+
+---
+id: notte-workflow-documentation-update-with-scripted-content
+trigger: "when doing documentation update with scripted content"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/lllyyysss77/notte
+---
+
+# Notte Workflow Documentation Update With Scripted Content
+
+## Action
+
+Follow the documentation-update-with-scripted-content workflow:
+1. Modify or add documentation files in docs/src/
+2. Run or update scripts in docs/src/scripts/ to generate or inline content
+3. Update SDK reference files in docs/src/sdk-reference/
+4. Update example or tester files in docs/src/testers/ or docs/src/snippets/
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: docs/src/**/*.mdx, docs/src/scripts/**/*.py, docs/src/sdk-reference/**/*.mdx
+
+---
+id: notte-instinct-file-naming
+trigger: "When creating or renaming a Python file"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: lllyyysss77/notte
+---
+
+# Notte Instinct File Naming
+
+## Action
+
+Name the file using snake_case
+
+## Evidence
+
+- Pattern in codeStyle.namingConventions.files
+- All Python files in packages/notte-*/src/notte_*/ follow snake_case
+
+---
+id: notte-instinct-function-naming
+trigger: "When defining a new function"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: lllyyysss77/notte
+---
+
+# Notte Instinct Function Naming
+
+## Action
+
+Use camelCase for function names
+
+## Evidence
+
+- Pattern in codeStyle.namingConventions.functions
+
+---
+id: notte-instinct-class-naming
+trigger: "When defining a new class"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: lllyyysss77/notte
+---
+
+# Notte Instinct Class Naming
+
+## Action
+
+Use PascalCase for class names
+
+## Evidence
+
+- Pattern in codeStyle.namingConventions.classes
+
+---
+id: notte-instinct-constant-naming
+trigger: "When defining a constant"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: lllyyysss77/notte
+---
+
+# Notte Instinct Constant Naming
+
+## Action
+
+Use SCREAMING_SNAKE_CASE for constant names
+
+## Evidence
+
+- Pattern in codeStyle.namingConventions.constants
+
+---
+id: notte-instinct-import-style
+trigger: "When importing modules within the repository"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: lllyyysss77/notte
+---
+
+# Notte Instinct Import Style
+
+## Action
+
+Use relative imports
+
+## Evidence
+
+- Pattern in codeStyle.importStyle
+
+---
+id: notte-instinct-export-style
+trigger: "When exporting functions or classes from a module"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: lllyyysss77/notte
+---
+
+# Notte Instinct Export Style
+
+## Action
+
+Use named exports
+
+## Evidence
+
+- Pattern in codeStyle.exportStyle
+
+---
+id: notte-instinct-test-location
+trigger: "When adding or updating tests"
+confidence: 0.9
+domain: testing
+source: repo-analysis
+source_repo: lllyyysss77/notte
+---
+
+# Notte Instinct Test Location
+
+## Action
+
+Place test files in the separate tests/ directory or docs/src/testers/
+
+## Evidence
+
+- Pattern in architecture.folderStructure.testLocation
+- Workflow filesInvolved for feature-implementation-with-tests
+
+---
+id: notte-instinct-test-naming
+trigger: "When naming a test file"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: lllyyysss77/notte
+---
+
+# Notte Instinct Test Naming
+
+## Action
+
+Use snake_case and a descriptive name matching the module under test
+
+## Evidence
+
+- Pattern in codeStyle.namingConventions.files
+- tests/**/*.py
+
+---
+id: notte-instinct-test-coupling
+trigger: "When implementing a new feature or bugfix"
+confidence: 0.9
+domain: testing
+source: repo-analysis
+source_repo: lllyyysss77/notte
+---
+
+# Notte Instinct Test Coupling
+
+## Action
+
+Add or update corresponding test(s) in tests/ or docs/src/testers/
+
+## Evidence
+
+- Workflow: feature-implementation-with-tests
+- Commit sequence includes test updates
+
+---
+id: notte-instinct-commit-format
+trigger: "When writing a commit message"
+confidence: 0.9
+domain: git
+source: repo-analysis
+source_repo: lllyyysss77/notte
+---
+
+# Notte Instinct Commit Format
+
+## Action
+
+Start with a concise imperative summary, optionally referencing an issue in parentheses
+
+## Evidence
+
+- Commits: 'Inline Notte skill prompt in quickstart (#819)'
+- Commits: 'Fix headless aspect ratio viewport handling (#820)'
+
+---
+id: notte-instinct-commit-length
+trigger: "When composing a commit message"
+confidence: 0.8
+domain: git
+source: repo-analysis
+source_repo: lllyyysss77/notte
+---
+
+# Notte Instinct Commit Length
+
+## Action
+
+Keep the summary under 60 characters
+
+## Evidence
+
+- Pattern: commits.averageLength = 52
+- Example commit messages
+
+---
+id: notte-instinct-feature-workflow
+trigger: "When adding a new feature or fixing a bug and ensuring it is tested"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: lllyyysss77/notte
+---
+
+# Notte Instinct Feature Workflow
+
+## Action
+
+Modify or add implementation files in packages/notte-*, then update or add corresponding test files in tests/ or docs/src/testers/
+
+## Evidence
+
+- Workflow: feature-implementation-with-tests
+- Commit sequence and files involved
+
+---
+id: notte-instinct-docs-workflow
+trigger: "When updating documentation, especially after SDK/API changes"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: lllyyysss77/notte
+---
+
+# Notte Instinct Docs Workflow
+
+## Action
+
+Modify or add documentation files in docs/src/, run or update scripts in docs/src/scripts/ to generate or inline content, update SDK reference files in docs/src/sdk-reference/, and update example or tester files in docs/src/testers/ or docs/src/snippets/
+
+## Evidence
+
+- Workflow: documentation-update-with-scripted-content
+- Commit sequence and files involved
+
